@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../media/favicon.png" type="image/png" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+      })();
+    </script>
+    <title>나의 휴일 | MyLog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500&display=block"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <a class="brand" href="index.html">MyLog</a>
+        <nav aria-label="주요 메뉴">
+          <a href="myClass.html">강의 시간표</a
+          ><a class="active" href="myHoliday.html">나의 휴일</a
+          ><a href="myProfile.html">내 프로필</a
+          ><a href="myTrip.html">여행 기록</a
+          ><a class="nav-cta" href="signUp.html">회원가입</a>
+          <button id="theme-toggle" type="button" aria-label="다크 모드 전환">&#9728;</button>
+        </nav>
+      </header>
+      <main class="page">
+        <p class="eyebrow">MY HOLIDAY</p>
+        <h1>&#127881; 나의 휴일 일과</h1>
+
+        <h2>&#127749; 느긋한 아침</h2>
+        <p class="schedule">
+          <strong>09:00</strong> &#128564; 늦잠 자는 행복<br />
+          <strong>10:00</strong> &#129360; 여유 있게 <mark>브런치</mark> 즐기기<br />
+          <strong>11:00</strong> &#9749; 커피 한 잔
+        </p>
+
+        <h2>&#128694; 오후 활동</h2>
+        <p class="schedule">
+          <strong>13:00</strong> &#128054; 강아지 산책<br />
+          <strong>14:30</strong> &#9749; 카페에서 커피 한 잔<br />
+          <strong>16:00</strong> <mark>낮잠</mark> 자기<br />
+          <strong>17:30</strong> &#127925; 음악 들으며 휴식
+        </p>
+
+        <h2>&#127769; 저녁과 밤</h2>
+        <p class="schedule">
+          <strong>18:00</strong> &#127858; 맛있는 저녁 만들기<br />
+          <strong>20:00</strong> &#127916; 영화 감상 <br />
+          <strong>22:50</strong> &#128164; 잠들기
+        </p>
+
+        <p class="note">
+          사소한 휴식이 다음 주를 움직이는 힘이 됩니다.<br />
+          &#128221; 휴일 버전 작성일: 2026년 7월
+        </p>
+      </main>
+      <footer>MyLog learning portal · 오늘도 한 걸음씩</footer>
+    </div>
+    <script src="../script/theme.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../media/favicon.png" type="image/png" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+      })();
+    </script>
+    <title>강의 시간표 | MyLog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500&display=block"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <a class="brand" href="index.html">MyLog</a>
+        <nav aria-label="주요 메뉴">
+          <a class="active" href="myClass.html">강의 시간표</a
+          ><a href="myHoliday.html">나의 휴일</a
+          ><a href="myProfile.html">내 프로필</a
+          ><a href="myTrip.html">여행 기록</a
+          ><a class="nav-cta" href="signUp.html">회원가입</a>
+          <button id="theme-toggle" type="button" aria-label="다크 모드 전환">
+            &#9728;
+          </button>
+        </nav>
+      </header>
+      <main class="page">
+        <p class="eyebrow">MY CLASS</p>
+        <h1>강의 시간표</h1>
+        <p class="lead">강의와 실습 일정을 한눈에 확인하세요.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>시간</th>
+                <th>월요일</th>
+                <th>화요일</th>
+                <th>수요일</th>
+                <th>목요일</th>
+                <th>금요일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>09:00 - 10:00</th>
+                <td rowspan="3" class="lecture">
+                  Vue.js<br /><small>웹 프레임워크</small>
+                </td>
+                <td rowspan="2" class="lecture">
+                  네트워크<br /><small>보안 기초</small>
+                </td>
+                <td rowspan="3" class="lecture">
+                  웹 시스템<br /><small>설계 및 분석</small>
+                </td>
+                <td class="lecture">IT 트렌드 특강</td>
+                <td rowspan="3" class="lecture">
+                  자바스크립트<br /><small>심화 실습</small>
+                </td>
+              </tr>
+              <tr>
+                <th>10:00 - 11:00</th>
+                <td rowspan="2" class="lab">
+                  데이터베이스<br /><small>SQL 실습</small>
+                </td>
+              </tr>
+              <tr>
+                <th>11:00 - 12:00</th>
+                <td class="lab">알고리즘 문제풀이</td>
+              </tr>
+              <tr>
+                <th>12:00 - 13:00</th>
+                <td colspan="5" class="lunch">점심 시간</td>
+              </tr>
+              <tr>
+                <th>13:00 - 14:00</th>
+                <td rowspan="3" class="lecture">
+                  UI/UX<br /><small>디자인 표준</small>
+                </td>
+                <td rowspan="2" class="lecture">
+                  리눅스<br /><small>시스템 관리</small>
+                </td>
+                <td rowspan="2" class="lecture">
+                  클라우드<br /><small>AWS 기초</small>
+                </td>
+                <td rowspan="3" class="lecture">자료구조</td>
+                <td class="lab">개인 프로젝트</td>
+              </tr>
+              <tr>
+                <th>14:00 - 15:00</th>
+                <td rowspan="2" class="lab">
+                  오픈소스<br /><small>소프트웨어</small>
+                </td>
+              </tr>
+              <tr>
+                <th>15:00 - 16:00</th>
+                <td rowspan="2" class="lecture">
+                  Git &amp; GitHub<br /><small>버전 관리</small>
+                </td>
+                <td rowspan="2" class="lecture">
+                  인공지능<br /><small>머신러닝 기초</small>
+                </td>
+              </tr>
+              <tr>
+                <th>16:00 - 17:00</th>
+                <td class="break">실습 시간</td>
+                <td rowspan="2" class="lecture">
+                  빅데이터<br /><small>분석 실무</small>
+                </td>
+                <td class="break">실습 시간</td>
+              </tr>
+              <tr>
+                <th>17:00 - 18:00</th>
+                <td class="lab">취업 창업 특강</td>
+                <td class="break">실습 시간</td>
+                <td class="break">실습 시간</td>
+                <td class="lab">주간 회고</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+      <footer>MyLog learning portal · 오늘도 한 걸음씩</footer>
+    </div>
+    <script src="../script/theme.js"></script>
+  </body>
+</html>

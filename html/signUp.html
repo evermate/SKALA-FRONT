@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../media/favicon.png" type="image/png" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+      })();
+    </script>
+    <title>회원가입 | MyLog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500&display=block"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <a class="brand" href="index.html">MyLog</a>
+        <nav aria-label="주요 메뉴">
+          <a href="myClass.html">강의 시간표</a
+          ><a href="myHoliday.html">나의 휴일</a
+          ><a href="myProfile.html">내 프로필</a
+          ><a href="myTrip.html">여행 기록</a
+          ><a class="nav-cta active" href="signUp.html">회원가입</a>
+          <button id="theme-toggle" type="button" aria-label="다크 모드 전환">&#9728;</button>
+        </nav>
+      </header>
+      <main class="page form-page">
+        <p class="eyebrow">SIGN UP</p>
+        <h1>회원가입</h1>
+        <p class="lead">학습 기록을 시작할 준비가 되셨나요?</p>
+        <p class="form-note"><em>* </em>은 필수 항목입니다.</p>
+        <form action="signUpResult.html" method="get">
+          <fieldset>
+            <legend>계정 정보</legend>
+            <div class="form-grid">
+              <p class="field">
+                <label for="userId">아이디 <em>*</em></label
+                ><input
+                  id="userId"
+                  name="userId"
+                  placeholder="아이디를 입력하세요"
+                  pattern="[^ㄱ-ㅣ]*"
+                  required
+                /><small class="field-message"></small>
+              </p>
+              <p class="field">
+                <label for="password">비밀번호 <em>*</em></label
+                ><input
+                  id="password"
+                  name="password"
+                  type="password"
+                  placeholder="영문+숫자 조합, 8자 이상"
+                  pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z0-9]{8,}"
+                  minlength="8"
+                  required
+                /><small class="field-message"></small>
+              </p>
+            </div>
+            <p class="field">
+              <label for="passwordConfirm">비밀번호 확인 <em>*</em></label
+              ><input
+                id="passwordConfirm"
+                name="passwordConfirm"
+                type="password"
+                placeholder="비밀번호를 다시 입력하세요"
+                required
+              /><small class="field-message"></small>
+            </p>
+            <p class="email-field">
+              <label for="emailId">이메일 <em>*</em></label
+              ><input
+                id="emailId"
+                name="emailId"
+                placeholder="example"
+                pattern="[^\s@]+"
+                required
+              /><span>@</span
+              ><input
+                id="emailDomainCustom"
+                name="emailDomainCustom"
+                placeholder="도메인 입력 (예: myschool.ac.kr)"
+                pattern="[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
+                hidden
+              /><select id="emailDomain" name="emailDomain" required>
+                <option value="">직접입력</option>
+                <option>gmail.com</option>
+                <option>naver.com</option>
+                <option>daum.net</option>
+                <option>kakao.com</option>
+                <option>nate.com</option>
+                <option>sk.com</option>
+              </select>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>개인 프로필 정보</legend>
+            <p>
+              <label for="name">이름 <em>*</em></label
+              ><input
+                id="name"
+                name="name"
+                placeholder="홍길동"
+                required
+              />
+            </p>
+            <p class="field">
+              <label for="birthdate">생년월일 <em>*</em></label
+              ><input
+                id="birthdate"
+                name="birthdate"
+                type="date"
+                min="1900-01-01"
+                required
+              /><small class="field-message"></small>
+            </p>
+            <fieldset class="radio-group">
+              <legend>성별</legend>
+              <label
+                ><input name="gender" type="radio" value="male" /> 남성</label
+              ><label
+                ><input name="gender" type="radio" value="female" />
+                여성</label
+              >
+            </fieldset>
+            <fieldset class="checkbox-group">
+              <legend>관심 분야 (중복 선택 가능)</legend>
+              <label
+                ><input name="interest" type="checkbox" value="frontend" />
+                웹 프론트엔드 (Vue.js/HTML)</label
+              ><label
+                ><input name="interest" type="checkbox" value="uiux" /> UI/UX
+                디자인 표준</label
+              ><label
+                ><input name="interest" type="checkbox" value="backend" />
+                백엔드 &amp; 데이터베이스</label
+              ><label
+                ><input name="interest" type="checkbox" value="cloud" />
+                클라우드 &amp; 인프라</label
+              >
+            </fieldset>
+            <p>
+              <label for="referral">가입 경로</label
+              ><select id="referral" name="referral">
+                <option value="">-- 선택해 주세요 --</option>
+                <option>검색 엔진</option>
+                <option>지인 추천</option>
+                <option>SNS</option>
+                <option>기타</option>
+              </select>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>자기소개</legend>
+            <p>
+              <label for="intro">한 줄 소개 또는 가입 인사</label
+              ><textarea
+                id="intro"
+                name="intro"
+                rows="4"
+                maxlength="200"
+                placeholder="여기에 내용을 입력하세요 (최대 200자)"
+              ></textarea>
+            </p>
+          </fieldset>
+          <div class="form-actions">
+            <input class="button" type="submit" value="동의하고 회원가입" /><input
+              class="button secondary"
+              type="reset"
+              value="다시 작성"
+            />
+          </div>
+        </form>
+      </main>
+      <footer>MyLog learning portal · 오늘도 한 걸음씩</footer>
+    </div>
+    <script src="../script/signUpForm.js"></script>
+    <script src="../script/theme.js"></script>
+  </body>
+</html>

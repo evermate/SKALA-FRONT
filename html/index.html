@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../media/favicon.png" type="image/png" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+      })();
+    </script>
+    <title>Welcome MyLog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500&display=block"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="home">
+    <div class="container">
+      <header class="site-header">
+        <a class="brand" href="index.html">MyLog</a>
+        <nav aria-label="주요 메뉴">
+          <a href="myClass.html">강의 시간표</a
+          ><a href="myHoliday.html">나의 휴일</a
+          ><a href="myProfile.html">내 프로필</a
+          ><a href="myTrip.html">여행 기록</a
+          ><a class="nav-cta" href="signUp.html">회원가입</a>
+          <button id="theme-toggle" type="button" aria-label="다크 모드 전환">
+            &#9728;
+          </button>
+        </nav>
+      </header>
+      <main class="portal-layout">
+        <section class="welcome-panel">
+          <p class="eyebrow">WELCOME TO MYLOG</p>
+          <h1>환영 인사</h1>
+          <p class="lead">
+            <span class="brand-word">MyLog</span>에 오신 것을 환영합니다.
+          </p>
+          <p>
+            강의 시간표와 여행 기록, 소소한 기능들을 함께 모아둔 공간입니다.
+          </p>
+          <div class="quick-links">
+            <a href="myClass.html">이번 주 시간표 <span>→</span></a>
+            <a href="myTrip.html">여행 기록 보기 <span>→</span></a>
+            <a href="myHoliday.html">나의 휴일 보기 <span>→</span></a>
+            <a href="myProfile.html">내 프로필 보기 <span>→</span></a>
+          </div>
+          <section class="photo-carousel" aria-label="여행 사진">
+            <p class="side-title photo-carousel-label">기억에 남는 순간들</p>
+            <div class="photo-track">
+              <div
+                class="photo-slide"
+                data-caption="시모노세키 항구에서 맛본 초밥"
+              >
+                <img
+                  src="../media/c1.jpg"
+                  alt="시모노세키 항구에서 맛본 초밥"
+                />
+              </div>
+              <div
+                class="photo-slide"
+                data-caption="모지코 레트로의 붉은 벽돌 역사"
+              >
+                <img
+                  src="../media/c2.jpg"
+                  alt="모지코 레트로의 붉은 벽돌 역사"
+                />
+              </div>
+              <div
+                class="photo-slide"
+                data-caption="오키나와, 테트라포드 너머 노을"
+              >
+                <img
+                  src="../media/c3.jpg"
+                  alt="오키나와 테트라포드 너머로 지는 노을"
+                />
+              </div>
+              <div
+                class="photo-slide"
+                data-caption="후지큐 하이랜드의 롤러코스터"
+              >
+                <img
+                  src="../media/c4.jpg"
+                  alt="후지큐 하이랜드 롤러코스터 실루엣"
+                />
+              </div>
+              <div class="photo-slide" data-caption="오사카 시내 한복판 교차로">
+                <img
+                  src="../media/c5.jpg"
+                  alt="오사카 시내, 신오사카·교토·난바로 갈리는 교차로"
+                />
+              </div>
+              <div
+                class="photo-slide"
+                data-caption="슈리성에서 내려다본 나하 시내"
+              >
+                <img
+                  src="../media/c6.jpg"
+                  alt="슈리성에서 내려다본 나하 시내"
+                />
+              </div>
+            </div>
+            <div class="photo-footer">
+              <p class="photo-caption" aria-live="polite">
+                시모노세키 항구에서 맛본 회 한 상
+              </p>
+              <div class="photo-controls">
+                <button
+                  type="button"
+                  class="photo-nav prev"
+                  aria-label="이전 사진"
+                >
+                  &#8249;
+                </button>
+                <div class="photo-indicators">
+                  <div class="photo-dots" role="group" aria-label="사진 선택">
+                    <button
+                      type="button"
+                      class="photo-dot active"
+                      aria-label="1번째 사진으로 이동"
+                      aria-current="true"
+                    ></button>
+                    <button
+                      type="button"
+                      class="photo-dot"
+                      aria-label="2번째 사진으로 이동"
+                    ></button>
+                    <button
+                      type="button"
+                      class="photo-dot"
+                      aria-label="3번째 사진으로 이동"
+                    ></button>
+                    <button
+                      type="button"
+                      class="photo-dot"
+                      aria-label="4번째 사진으로 이동"
+                    ></button>
+                    <button
+                      type="button"
+                      class="photo-dot"
+                      aria-label="5번째 사진으로 이동"
+                    ></button>
+                    <button
+                      type="button"
+                      class="photo-dot"
+                      aria-label="6번째 사진으로 이동"
+                    ></button>
+                  </div>
+                  <p class="photo-fraction">1 / 6</p>
+                </div>
+                <button
+                  type="button"
+                  class="photo-nav next"
+                  aria-label="다음 사진"
+                >
+                  &#8250;
+                </button>
+                <button
+                  type="button"
+                  class="photo-playpause"
+                  aria-pressed="false"
+                  aria-label="자동 재생 정지"
+                >
+                  &#9208;
+                </button>
+              </div>
+            </div>
+          </section>
+        </section>
+        <aside class="sidebar">
+          <section class="side-section">
+            <p class="side-title">오늘의 미니 게임</p>
+            <p>1부터 50 사이의 숫자를 5번 안에 맞혀 보세요.</p>
+            <div class="game-actions">
+              <button type="button" class="button small" id="game-start">
+                Up &amp; Down 시작
+              </button>
+              <button
+                type="button"
+                class="game-success-count"
+                id="game-success-count"
+                disabled
+              >
+                오늘 성공 0회
+              </button>
+            </div>
+          </section>
+          <section class="side-section">
+            <p class="side-title">학습 도구</p>
+            <div class="button-row">
+              <button type="button" class="text-button" id="grade-start">
+                성적 계산</button
+              ><button type="button" class="text-button" id="bag-start">
+                내 가방 보기
+              </button>
+            </div>
+          </section>
+          <section class="side-section location-section">
+            <p class="side-title">실시간 정보</p>
+            <p id="current-location">위치 확인 중…</p>
+          </section>
+          <section class="side-section weather-section">
+            <label class="side-title" for="city-select">실시간 날씨</label>
+            <select id="city-select">
+              <option value="me" selected>내 위치</option>
+              <option value="seoul">서울</option>
+              <option value="busan">부산</option>
+              <option value="jeju">제주</option>
+              <option value="tokyo">도쿄</option>
+              <option value="newyork">뉴욕</option>
+              <option value="london">런던</option>
+              <option value="paris">파리</option>
+              <option value="beijing">베이징</option>
+              <option value="sydney">시드니</option>
+              <option value="dubai">두바이</option>
+              <option value="singapore">싱가포르</option>
+            </select>
+            <div id="weather-box" aria-live="polite">
+              도시를 선택하면 날씨를 불러옵니다.
+            </div>
+          </section>
+          <section class="side-section">
+            <p class="side-title">오늘의 한마디</p>
+            <p id="daily-quote">문구를 불러오는 중…</p>
+          </section>
+        </aside>
+      </main>
+      <footer>MyLog learning portal · 오늘도 한 걸음씩</footer>
+    </div>
+    <dialog id="app-modal">
+      <div class="modal-message-wrap">
+        <p id="app-modal-message"></p>
+        <p id="app-modal-meta" class="modal-meta" hidden></p>
+        <button
+          type="button"
+          id="app-modal-secret"
+          class="modal-secret"
+          tabindex="-1"
+          aria-hidden="true"
+        ></button>
+      </div>
+      <input id="app-modal-input" hidden />
+      <p id="app-modal-input-hint" class="modal-input-hint" hidden></p>
+      <div class="modal-actions">
+        <button
+          id="app-modal-cancel"
+          type="button"
+          class="button secondary"
+          hidden
+        >
+          취소
+        </button>
+        <button id="app-modal-confirm" type="button" class="button">
+          확인
+        </button>
+      </div>
+    </dialog>
+    <script type="module" src="../script/upDown.js"></script>
+    <script type="module" src="../script/grade.js"></script>
+    <script type="module" src="../script/bag.js"></script>
+    <script type="module" src="../script/realtimeInfo.js"></script>
+    <script src="../script/currentLocation.js"></script>
+    <script src="../script/dailyQuote.js"></script>
+    <script src="../script/photoCarousel.js"></script>
+    <script src="../script/theme.js"></script>
+  </body>
+</html>

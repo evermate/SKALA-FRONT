@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../media/favicon.png" type="image/png" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+      })();
+    </script>
+    <title>가입 완료 | MyLog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500&display=block"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <a class="brand" href="index.html">MyLog</a>
+        <nav aria-label="주요 메뉴">
+          <a href="myClass.html">강의 시간표</a
+          ><a href="myHoliday.html">나의 휴일</a
+          ><a href="myProfile.html">내 프로필</a
+          ><a href="myTrip.html">여행 기록</a
+          ><a class="nav-cta active" href="signUp.html">회원가입</a>
+          <button id="theme-toggle" type="button" aria-label="다크 모드 전환">&#9728;</button>
+        </nav>
+      </header>
+      <main class="result-page">
+        <p class="result-icon">&#127881;</p>
+        <p class="eyebrow">WELCOME ABOARD</p>
+        <h1>회원가입이 완료되었습니다!</h1>
+        <p class="lead">
+          <span id="member-name">새로운</span> MyLog 멤버가 되어 주셔서
+          반갑습니다.
+        </p>
+        <section class="result-notice">
+          <h2>안내 사항</h2>
+          <ul>
+            <li><s>입력하신 이메일 주소로 가입 확인 메일이 발송되었습니다.</s></li>
+            <li><s>보안을 위해 첫 로그인 후 비밀번호를 다시 한번 확인해 주세요.</s></li>
+            <li><s>작성하신 프로필 정보는 마이페이지에서 언제든지 수정이 가능합니다.</s></li>
+          </ul>
+          <p class="result-disclaimer">
+            ※ 실습용 정적 페이지라 실제로 메일 발송·로그인·마이페이지는 없습니다.
+          </p>
+        </section>
+        <section class="result-links">
+          <h2>이동하기</h2>
+          <p>아래 링크를 클릭하면 이전에 작성한 다른 페이지로 이동할 수 있습니다.</p>
+          <ul>
+            <li><a href="myProfile.html">나의 프로필 보기</a></li>
+            <li><a href="myClass.html">나의 수업 시간표 보기</a></li>
+            <li><a href="myHoliday.html">나의 휴일 계획 보기</a></li>
+          </ul>
+        </section>
+        <a class="button" href="index.html">홈으로 돌아가기</a>
+      </main>
+      <footer>MyLog learning portal · 오늘도 한 걸음씩</footer>
+    </div>
+    <script>
+      const n = new URLSearchParams(location.search).get("name");
+      if (n) document.querySelector("#member-name").textContent = n + "님, ";
+    </script>
+    <script src="../script/theme.js"></script>
+  </body>
+</html>

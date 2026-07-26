@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../media/favicon.png" type="image/png" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+      })();
+    </script>
+    <title>여행지 리뷰 카드 | MyLog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500&display=block"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <a class="brand" href="index.html">MyLog</a>
+        <nav aria-label="주요 메뉴">
+          <a href="myClass.html">강의 시간표</a
+          ><a href="myHoliday.html">나의 휴일</a
+          ><a href="myProfile.html">내 프로필</a
+          ><a class="active" href="myTrip.html">여행 기록</a
+          ><a class="nav-cta" href="signUp.html">회원가입</a>
+          <button id="theme-toggle" type="button" aria-label="다크 모드 전환">
+            &#9728;
+          </button>
+        </nav>
+      </header>
+      <main class="page trip-page">
+        <p class="eyebrow">MY TRIP</p>
+        <div class="trip-title-row">
+          <h1>여행 기록</h1>
+          <audio controls>
+            <source src="../media/travel-note.mp3" type="audio/mpeg" />
+            브라우저가 오디오를 지원하지 않습니다.
+          </audio>
+        </div>
+        <section class="trip-grid" aria-label="여행지 리뷰">
+          <p class="trip-card">
+            <img
+              src="../media/trip1.jpg"
+              alt="아리마 온천 거리의 노천탕 풍경"
+            /><span class="trip-tag nature">온천·자연</span
+            ><span class="trip-body"
+              ><span class="trip-heading"
+                ><span><strong>고베</strong></span
+                ><b>★★★★★</b></span
+              ><span class="trip-rule"></span
+              ><span class="trip-desc"
+                >아리마 온천 거리의 좁은 골목을 따라 김이 피어오르고, 노천탕에
+                몸을 담그니 겨울 추위가 싹 가셨다. 조용하고 아늑한 온천
+                마을.</span
+              ><span class="trip-list"
+                ><span>아리마 온천 노천탕</span><span>고베규 만찬</span
+                ><span>기타노이진칸 거리 산책</span></span
+              ></span
+            >
+          </p>
+          <p class="trip-card">
+            <img
+              src="../media/trip2.jpg"
+              alt="모지코 레트로의 항구 야경"
+            /><span class="trip-tag food">미식·전통시장</span
+            ><span class="trip-body"
+              ><span class="trip-heading"
+                ><span><strong>기타큐슈</strong></span
+                ><b>★★★★★</b></span
+              ><span class="trip-rule"></span
+              ><span class="trip-desc"
+                >간몬 해저터널을 걸어서 건너 가라토 시장에서 맛본 갓 잡은 복어
+                회는 잊을 수 없는 맛. 모지코 레트로의 옛 항구 정취도
+                인상적이었다.</span
+              ><span class="trip-list"
+                ><span>가라토 시장 복어회</span
+                ><span>간몬 해저터널 도보 횡단</span
+                ><span>모지코 레트로 야경</span></span
+              ></span
+            >
+          </p>
+          <p class="trip-card">
+            <img src="../media/trip3.jpg" alt="에메랄드빛 오키나와 바다" /><span
+              class="trip-tag culture"
+              >문화·휴양</span
+            ><span class="trip-body"
+              ><span class="trip-heading"
+                ><span><strong>오키나와</strong></span
+                ><b>★★★★★</b></span
+              ><span class="trip-rule"></span
+              ><span class="trip-desc"
+                >에메랄드빛 바다에서 스노클링하고 슈리성에서 류큐 왕국 흔적을
+                봤다. 덥지만 느긋하게 돌아다니기 좋았다.</span
+              ><span class="trip-list"
+                ><span>슈리성 류큐 왕국 유적</span><span>츄라우미 수족관</span
+                ><span>오키나와 소바 한 그릇</span></span
+              ></span
+            >
+          </p>
+          <p class="trip-card">
+            <img
+              src="../media/trip4.jpg"
+              alt="도톤보리 글리코 상 네온 간판 야경"
+            /><span class="trip-tag food">미식·야경</span
+            ><span class="trip-body"
+              ><span class="trip-heading"
+                ><span><strong>오사카</strong></span
+                ><b>★★★★★</b></span
+              ><span class="trip-rule"></span
+              ><span class="trip-desc"
+                >도톤보리 강변을 걸으며 글리코 상 네온사인 아래서 인증샷을 찍고,
+                다코야키와 오코노미야키로 배를 채웠다. 밤이 되면 화려한 간판
+                불빛이 강물에 비쳐 한층 반짝인다.</span
+              ><span class="trip-list"
+                ><span>글리코 상 포토스팟</span><span>도톤보리 다코야키</span
+                ><span>신사이바시 쇼핑거리</span></span
+              ></span
+            >
+          </p>
+          <p class="trip-card">
+            <img
+              src="../media/trip5.jpg"
+              alt="후지산이 보이는 후지큐 하이랜드 롤러코스터"
+            /><span class="trip-tag nature">후지산 뷰·테마파크</span
+            ><span class="trip-body"
+              ><span class="trip-heading"
+                ><span><strong>도쿄</strong></span
+                ><b>★★★★★</b></span
+              ><span class="trip-rule"></span
+              ><span class="trip-desc"
+                >도쿄 여행 중 후지큐 하이랜드에 다녀왔다. 롤러코스터를 타는
+                사이사이로 후지산이 보여서 스릴과 절경을 같이 즐긴
+                하루였다.</span
+              ><span class="trip-list"
+                ><span>후지큐 하이랜드 롤러코스터</span><span>후지산 전망</span
+                ><span>기념품 숍 구경</span></span
+              ></span
+            >
+          </p>
+          <p class="trip-card trip-card-video">
+            <video controls muted poster="../media/miri2.jpg">
+              <source src="../media/travel-moment.mp4" type="video/mp4" />
+              브라우저가 비디오를 지원하지 않습니다.
+            </video>
+          </p>
+        </section>
+      </main>
+      <footer>MyLog learning portal · 오늘도 한 걸음씩</footer>
+    </div>
+    <script src="../script/tripMedia.js"></script>
+    <script src="../script/theme.js"></script>
+  </body>
+</html>

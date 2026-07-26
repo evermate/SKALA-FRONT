@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../media/favicon.png" type="image/png" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+      })();
+    </script>
+    <title>내 프로필 | MyLog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500&display=block"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <a class="brand" href="index.html">MyLog</a>
+        <nav aria-label="주요 메뉴">
+          <a href="myClass.html">강의 시간표</a
+          ><a href="myHoliday.html">나의 휴일</a
+          ><a class="active" href="myProfile.html">내 프로필</a
+          ><a href="myTrip.html">여행 기록</a
+          ><a class="nav-cta" href="signUp.html">회원가입</a>
+          <button id="theme-toggle" type="button" aria-label="다크 모드 전환">
+            &#9728;
+          </button>
+        </nav>
+      </header>
+      <main class="page">
+        <p class="eyebrow">MY PROFILE</p>
+        <h1>내 프로필</h1>
+        <div class="profile-grid">
+          <section class="content-card">
+            <h2>좋아하는 음식</h2>
+            <ul>
+              <li>초밥</li>
+              <li>치킨</li>
+              <li>피자</li>
+            </ul>
+          </section>
+          <section class="content-card">
+            <h2>올해 할 일</h2>
+            <ol>
+              <li>매일 한 줄 회고 쓰기</li>
+              <li>프로젝트 완성하기</li>
+              <li>새로운 도시 여행하기</li>
+            </ol>
+          </section>
+          <section class="content-card wide">
+            <h2>나를 설명하는 단어</h2>
+            <dl>
+              <dt>호기심</dt>
+              <dd>새로운 원리를 이해하는 과정에서 즐거움을 느낍니다.</dd>
+              <dt>꾸준함</dt>
+              <dd>작은 진전을 매일 쌓아가는 것을 믿습니다.</dd>
+              <dt>성실함</dt>
+              <dd>맡은 일은 끝까지 챙겨서 마무리합니다.</dd>
+            </dl>
+          </section>
+        </div>
+      </main>
+      <footer>MyLog learning portal · 오늘도 한 걸음씩</footer>
+    </div>
+    <script src="../script/theme.js"></script>
+  </body>
+</html>
