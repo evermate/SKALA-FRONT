@@ -16,7 +16,11 @@ let userPaused = false;
 function goTo(next) {
   index = (next + slides.length) % slides.length;
   syncing = true;
-  slides[index].scrollIntoView({ behavior: "smooth", inline: "start" });
+  slides[index].scrollIntoView({
+    behavior: "smooth",
+    inline: "start",
+    block: "nearest",
+  });
   updateIndicators();
 }
 

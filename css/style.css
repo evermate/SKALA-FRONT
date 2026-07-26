@@ -1088,7 +1088,7 @@ textarea:focus {
     font-size: 12px;
   }
   .portal-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     padding: 42px 0;
   }
   .welcome-panel {
